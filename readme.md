@@ -21,9 +21,9 @@
 
 ```
 //克隆项目
-git clone
+git clone https://github.com/niwota/Lara-Admin.git
 
-cd 
+cd Lara-Admin
 
 //安装后端依赖
 composer install

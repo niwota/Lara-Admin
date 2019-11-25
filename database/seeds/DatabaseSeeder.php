@@ -52,15 +52,9 @@ class DatabaseSeeder extends Seeder
 
         Menu::insert([
             [
-                'name' => 'Dashboard',
-                'uri' => 'home',
-                'icon' => 'fas fa-tachometer-alt',
-                'permission' => 'home',
-                'pid' => 0
-            ],
-            [
                 'name' => '后台管理',
                 'uri' => '',
+                'order' => 99,
                 'icon' => 'fa fa-home',
                 'permission' => 'admin',
                 'pid' => 0
@@ -68,6 +62,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => '菜单管理',
                 'uri' => 'menu.index',
+                'order' => 1,
                 'icon' => 'far fa-circle',
                 'permission' => 'menu.index',
                 'pid' => 1
@@ -75,6 +70,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => '用户管理',
                 'uri' => 'user.index',
+                'order' => 1,
                 'icon' => 'far fa-circle',
                 'permission' => 'user.index',
                 'pid' => 1
@@ -82,6 +78,7 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => '角色管理',
                 'uri' => 'role.index',
+                'order' => 1,
                 'icon' => 'far fa-circle',
                 'permission' => 'role.index',
                 'pid' => 1
@@ -89,9 +86,18 @@ class DatabaseSeeder extends Seeder
             [
                 'name' => '权限管理',
                 'uri' => 'permission.index',
+                'order' => 1,
                 'icon' => 'far fa-circle',
                 'permission' => 'permission.index',
                 'pid' => 1
+            ],
+            [
+                'name' => 'Dashboard',
+                'uri' => 'home',
+                'order' => 100,
+                'icon' => 'fas fa-tachometer-alt',
+                'permission' => 'home',
+                'pid' => 0
             ]
         ]);
     }

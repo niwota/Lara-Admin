@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="card-body">
-        <form class="form-horizontal" id="needs-validation" novalidate method="post" action="@isset($menu){{route('menu.update',['menu'=>$id])}}@else{{route('menu.store')}}@endisset">
+        <form class="form-horizontal needs-validation" novalidate method="post" action="@isset($menu){{route('menu.update',['menu'=>$id])}}@else{{route('menu.store')}}@endisset">
             @csrf
             @isset($menu)
                 @method('PUT')
