@@ -8,13 +8,13 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta name="renderer"  content="webkit">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
 </head>
 
 <body class="hold-transition login-page">
         <div class="login-box">
           <div class="login-logo">
-            <b>Admin</b>LTE
+            <b>{{config('app.name')}}</b>
           </div>
           <!-- /.login-logo -->
           <div class="card">
@@ -79,7 +79,7 @@
         </div>
         <!-- /.login-box --> --}}
         
-        <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{mix('js/app.js')}}"></script>
         @include('layouts.toastr')
         
         </body>
