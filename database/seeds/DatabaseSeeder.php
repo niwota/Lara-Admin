@@ -52,6 +52,13 @@ class DatabaseSeeder extends Seeder
 
         Menu::insert([
             [
+                'name' => 'Dashboard',
+                'uri' => 'home',
+                'icon' => 'fas fa-tachometer-alt',
+                'permission' => 'home',
+                'pid' => 0
+            ],
+            [
                 'name' => '后台管理',
                 'uri' => '',
                 'icon' => 'fa fa-home',
