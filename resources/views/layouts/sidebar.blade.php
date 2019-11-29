@@ -28,7 +28,7 @@
             @if(empty($item['children']))
                 @can($item['permission'])
                 <li class="nav-item">
-                    <a href="{{route($item['uri'])}}" class="nav-link">
+                    <a href="{{Route::has($item['uri']) ? route($item['uri']) : '#'}}" class="nav-link">
                       <i class="nav-icon {{$item['icon']??''}}"></i>
                       <p>{{$item['name']}}</p>
                     </a>
@@ -45,7 +45,7 @@
                   @foreach ($item['children'] as $child)
                       @can($child['permission'])
                       <li class="nav-item">
-                          <a href="{{route($child['uri'])}}" class="nav-link">
+                          <a href="{{Route::has($child['uri']) ? route($child['uri']) : '#'}}" class="nav-link">
                           <i class="{{$child['icon']}} nav-icon"></i>
                           <p>{{$child['name']}}</p>
                           </a>
